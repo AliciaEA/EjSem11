@@ -28,36 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new MetroFramework.Controls.MetroButton();
-            this.tbMotConsul = new MetroFramework.Controls.MetroTextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.cmbDepMed = new MetroFramework.Controls.MetroComboBox();
-            this.cmbGenero = new MetroFramework.Controls.MetroComboBox();
-            this.dtpNacimiento = new MetroFramework.Controls.MetroDateTime();
-            this.tbApellido = new MetroFramework.Controls.MetroTextBox();
             this.tbNombre = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.tbMotConsul = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.cbAlergia = new System.Windows.Forms.CheckBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.cmbDepMed = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.cmbGenero = new MetroFramework.Controls.MetroComboBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.dtpNacimiento = new MetroFramework.Controls.MetroDateTime();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.tbApellido = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.dgvPacientes = new MetroFramework.Controls.MetroGrid();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.metroLabel7);
             this.groupBox1.Controls.Add(this.btnAgregar);
             this.groupBox1.Controls.Add(this.tbNombre);
             this.groupBox1.Controls.Add(this.tbMotConsul);
             this.groupBox1.Controls.Add(this.metroLabel1);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.cbAlergia);
             this.groupBox1.Controls.Add(this.metroLabel2);
             this.groupBox1.Controls.Add(this.cmbDepMed);
             this.groupBox1.Controls.Add(this.metroLabel3);
@@ -67,7 +69,7 @@
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.tbApellido);
             this.groupBox1.Controls.Add(this.metroLabel6);
-            this.groupBox1.Location = new System.Drawing.Point(40, 92);
+            this.groupBox1.Location = new System.Drawing.Point(51, 74);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(611, 529);
             this.groupBox1.TabIndex = 0;
@@ -81,6 +83,37 @@
             this.btnAgregar.TabIndex = 29;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseSelectable = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // tbNombre
+            // 
+            // 
+            // 
+            // 
+            this.tbNombre.CustomButton.Image = null;
+            this.tbNombre.CustomButton.Location = new System.Drawing.Point(195, 1);
+            this.tbNombre.CustomButton.Name = "";
+            this.tbNombre.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.tbNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbNombre.CustomButton.TabIndex = 1;
+            this.tbNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbNombre.CustomButton.UseSelectable = true;
+            this.tbNombre.CustomButton.Visible = false;
+            this.tbNombre.Lines = new string[0];
+            this.tbNombre.Location = new System.Drawing.Point(126, 41);
+            this.tbNombre.MaxLength = 32767;
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.PasswordChar = '\0';
+            this.tbNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbNombre.SelectedText = "";
+            this.tbNombre.SelectionLength = 0;
+            this.tbNombre.SelectionStart = 0;
+            this.tbNombre.ShortcutsEnabled = true;
+            this.tbNombre.Size = new System.Drawing.Size(225, 31);
+            this.tbNombre.TabIndex = 22;
+            this.tbNombre.UseSelectable = true;
+            this.tbNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tbMotConsul
             // 
@@ -113,16 +146,33 @@
             this.tbMotConsul.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbMotConsul.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // checkBox1
+            // metroLabel1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(20, 378);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(110, 24);
-            this.checkBox1.TabIndex = 27;
-            this.checkBox1.Text = "¿Alergias?";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(20, 41);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel1.TabIndex = 16;
+            this.metroLabel1.Text = "Nombre:";
+            // 
+            // cbAlergia
+            // 
+            this.cbAlergia.AutoSize = true;
+            this.cbAlergia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAlergia.Location = new System.Drawing.Point(20, 378);
+            this.cbAlergia.Name = "cbAlergia";
+            this.cbAlergia.Size = new System.Drawing.Size(22, 21);
+            this.cbAlergia.TabIndex = 27;
+            this.cbAlergia.UseVisualStyleBackColor = true;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(20, 85);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel2.TabIndex = 17;
+            this.metroLabel2.Text = "Apellido:";
             // 
             // cmbDepMed
             // 
@@ -139,6 +189,15 @@
             this.cmbDepMed.TabIndex = 26;
             this.cmbDepMed.UseSelectable = true;
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(20, 130);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(136, 19);
+            this.metroLabel3.TabIndex = 18;
+            this.metroLabel3.Text = "Fecha de Nacimiento:";
+            // 
             // cmbGenero
             // 
             this.cmbGenero.FormattingEnabled = true;
@@ -152,6 +211,15 @@
             this.cmbGenero.TabIndex = 25;
             this.cmbGenero.UseSelectable = true;
             // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(20, 176);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(55, 19);
+            this.metroLabel4.TabIndex = 19;
+            this.metroLabel4.Text = "Genero:";
+            // 
             // dtpNacimiento
             // 
             this.dtpNacimiento.Location = new System.Drawing.Point(166, 124);
@@ -159,6 +227,15 @@
             this.dtpNacimiento.Name = "dtpNacimiento";
             this.dtpNacimiento.Size = new System.Drawing.Size(224, 29);
             this.dtpNacimiento.TabIndex = 24;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(20, 229);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(146, 19);
+            this.metroLabel5.TabIndex = 20;
+            this.metroLabel5.Text = "Departamento Medico:";
             // 
             // tbApellido
             // 
@@ -190,36 +267,6 @@
             this.tbApellido.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbApellido.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tbNombre
-            // 
-            // 
-            // 
-            // 
-            this.tbNombre.CustomButton.Image = null;
-            this.tbNombre.CustomButton.Location = new System.Drawing.Point(195, 1);
-            this.tbNombre.CustomButton.Name = "";
-            this.tbNombre.CustomButton.Size = new System.Drawing.Size(29, 29);
-            this.tbNombre.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbNombre.CustomButton.TabIndex = 1;
-            this.tbNombre.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbNombre.CustomButton.UseSelectable = true;
-            this.tbNombre.CustomButton.Visible = false;
-            this.tbNombre.Lines = new string[0];
-            this.tbNombre.Location = new System.Drawing.Point(126, 41);
-            this.tbNombre.MaxLength = 32767;
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.PasswordChar = '\0';
-            this.tbNombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbNombre.SelectedText = "";
-            this.tbNombre.SelectionLength = 0;
-            this.tbNombre.SelectionStart = 0;
-            this.tbNombre.ShortcutsEnabled = true;
-            this.tbNombre.Size = new System.Drawing.Size(225, 31);
-            this.tbNombre.TabIndex = 22;
-            this.tbNombre.UseSelectable = true;
-            this.tbNombre.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbNombre.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
@@ -228,51 +275,6 @@
             this.metroLabel6.Size = new System.Drawing.Size(126, 19);
             this.metroLabel6.TabIndex = 21;
             this.metroLabel6.Text = "Motivo de Consulta:";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(20, 229);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(146, 19);
-            this.metroLabel5.TabIndex = 20;
-            this.metroLabel5.Text = "Departamento Medico:";
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(20, 176);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(55, 19);
-            this.metroLabel4.TabIndex = 19;
-            this.metroLabel4.Text = "Genero:";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(20, 130);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(136, 19);
-            this.metroLabel3.TabIndex = 18;
-            this.metroLabel3.Text = "Fecha de Nacimiento:";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(20, 85);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
-            this.metroLabel2.TabIndex = 17;
-            this.metroLabel2.Text = "Apellido:";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(20, 41);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(62, 19);
-            this.metroLabel1.TabIndex = 16;
-            this.metroLabel1.Text = "Nombre:";
             // 
             // dgvPacientes
             // 
@@ -284,38 +286,38 @@
             this.dgvPacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPacientes.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPacientes.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgvPacientes.EnableHeadersVisualStyles = false;
             this.dgvPacientes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dgvPacientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvPacientes.Location = new System.Drawing.Point(726, 162);
+            this.dgvPacientes.Location = new System.Drawing.Point(714, 104);
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvPacientes.RowHeadersWidth = 62;
             this.dgvPacientes.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvPacientes.RowTemplate.Height = 28;
@@ -323,11 +325,20 @@
             this.dgvPacientes.Size = new System.Drawing.Size(510, 332);
             this.dgvPacientes.TabIndex = 14;
             // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(44, 378);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(68, 19);
+            this.metroLabel7.TabIndex = 30;
+            this.metroLabel7.Text = "¿Alergias?";
+            // 
             // PacienteFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1436, 744);
+            this.ClientSize = new System.Drawing.Size(1061, 692);
             this.Controls.Add(this.dgvPacientes);
             this.Controls.Add(this.groupBox1);
             this.Name = "PacienteFrm";
@@ -346,7 +357,7 @@
         private MetroFramework.Controls.MetroTextBox tbNombre;
         private MetroFramework.Controls.MetroTextBox tbMotConsul;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbAlergia;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroComboBox cmbDepMed;
         private MetroFramework.Controls.MetroLabel metroLabel3;
@@ -357,5 +368,6 @@
         private MetroFramework.Controls.MetroTextBox tbApellido;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroGrid dgvPacientes;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

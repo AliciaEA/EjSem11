@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formulariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registroPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,6 +66,7 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // formulariosToolStripMenuItem
             // 
@@ -82,12 +86,17 @@
             // metroToggle1
             // 
             this.metroToggle1.AutoSize = true;
-            this.metroToggle1.Location = new System.Drawing.Point(982, 40);
+            this.metroToggle1.Location = new System.Drawing.Point(1033, 39);
             this.metroToggle1.Name = "metroToggle1";
             this.metroToggle1.Size = new System.Drawing.Size(80, 36);
             this.metroToggle1.TabIndex = 17;
             this.metroToggle1.Text = "Off";
             this.metroToggle1.UseSelectable = true;
+            this.metroToggle1.CheckedChanged += new System.EventHandler(this.metroToggle1_CheckedChanged);
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
             // 
             // Form1
             // 
@@ -106,6 +115,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem formulariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registroPacienteToolStripMenuItem;
         private MetroFramework.Controls.MetroToggle metroToggle1;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }
 
