@@ -15,12 +15,13 @@ namespace FormPacientes.Formularios
     public partial class PacienteFrm : MetroFramework.Forms.MetroForm
     {
         RegistroPaciente pacientes;
+        int contadorPac = 0;
         public PacienteFrm()
         {
             InitializeComponent();
             cmbDepMed.DataSource = Enum.GetValues(typeof(DepartamentoMedico));
             pacientes = new RegistroPaciente();
-           
+
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -29,7 +30,8 @@ namespace FormPacientes.Formularios
 
             try
             {
-               
+                paciente.ID = contadorPac;
+                contadorPac++;
                 paciente.Name = tbNombre.Text;
                 paciente.Lastname = tbApellido.Text;
                 paciente.FechaNac = dtpNacimiento.Value;
@@ -41,6 +43,9 @@ namespace FormPacientes.Formularios
                 pacientes.AgregarPaciente(paciente);
 
                 MessageBox.Show("Paciente agregado correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+                MostrarPacientes();
+
 
             }
             catch (Exception ex)
@@ -48,7 +53,23 @@ namespace FormPacientes.Formularios
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
 
+        public void MostrarPacientes()
+        {
+            dgvPacientes.DataSource = null;
+            dgvPacientes.DataSource = pacientes.ObtenerPacientes();
+        }
+        public void Limpiar()
+        {
+            tbNombre.Clear();
+            tbApellido.Clear();
+            dtpNacimiento.Value = DateTime.Now;
+            cmbGenero.SelectedIndex = 0;
+            cmbDepMed.SelectedIndex = 0;
+            tbMotConsul.Clear();
+            cbAlergia.Checked = false;
+            tbNombre.Focus();
         }
     }
 }

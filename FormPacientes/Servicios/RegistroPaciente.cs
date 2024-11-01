@@ -15,7 +15,10 @@ namespace FormPacientes.Servicios
         {
             Pacientes.Add(paciente);
         }
+        public List<Paciente> ObtenerPacientes()
+        {
+            return Pacientes;
 
-
+        }
     }
 }

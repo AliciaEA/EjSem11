@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,5 +17,18 @@ namespace FormPacientes.Modelos
         public DepartamentoMedico Departamento { get; set; }
         public string Descripcion {  get; set; }
         public bool Alergias { get; set; }
+
+        public int Edad => CalcularEdad();
+
+        public int CalcularEdad()
+        {
+            DateTime fechaActual = DateTime.Now;
+            int edad = fechaActual.Year - FechaNac.Year;
+            if (FechaNac > fechaActual.AddYears(-edad))
+            {
+                edad--;
+            }
+            return edad;
+        }
     }
 }
