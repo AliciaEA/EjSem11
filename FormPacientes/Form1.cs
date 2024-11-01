@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormPacientes.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace FormPacientes
         public Form1()
         {
             InitializeComponent();
+            
+        }
+
+        private void registroPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PacienteFrm frm = new PacienteFrm();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }
