@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormPacientes", "FormPacientes\FormPacientes.csproj", "{7B007C64-C413-4CBC-BE03-B08E7B71BB79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReparacionesAutos", "ReparacionesAutos\ReparacionesAutos.csproj", "{BF7AA8F4-30D5-421C-8E9B-96A4D9BD5A4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7B007C64-C413-4CBC-BE03-B08E7B71BB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B007C64-C413-4CBC-BE03-B08E7B71BB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B007C64-C413-4CBC-BE03-B08E7B71BB79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7AA8F4-30D5-421C-8E9B-96A4D9BD5A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AA8F4-30D5-421C-8E9B-96A4D9BD5A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AA8F4-30D5-421C-8E9B-96A4D9BD5A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7AA8F4-30D5-421C-8E9B-96A4D9BD5A4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
